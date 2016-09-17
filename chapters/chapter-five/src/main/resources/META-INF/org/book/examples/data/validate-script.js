@@ -1,0 +1,1 @@
+xpath("//*[local-name()='message']/*[local-name()='body']").length >0 && xpath("//*[local-name()='message']/*[local-name()='priority']")==1

@@ -1,0 +1,10 @@
+<t:message xmlns:t="validate-schema.xsd">
+    <t:headers>
+        <t:header>
+            <t:name>header1</t:name>
+            <t:value>value1</t:value>
+        </t:header>
+    </t:headers>
+    <t:priority>1</t:priority>
+    <t:body>body3</t:body>
+</t:message>

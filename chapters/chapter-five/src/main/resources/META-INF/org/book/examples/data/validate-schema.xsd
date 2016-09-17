@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://test.msg/" elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:t="http://test.msg/">
+    <xs:element name="message" type="t:messageType"/>
+    <xs:complexType name="headersType">
+        <xs:sequence>
+            <xs:element type="t:headerType" name="header" maxOccurs="unbounded" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="messageType">
+        <xs:sequence>
+            <xs:element type="t:headersType" name="headers"/>
+            <xs:element type="xs:int" name="priority"/>
+            <xs:element type="xs:string" name="body"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="headerType">
+        <xs:sequence>
+            <xs:element name="name">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="header1"/>
+                        <xs:enumeration value="header2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element type="xs:string" name="value"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

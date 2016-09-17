@@ -30,7 +30,8 @@
         <module>chapter-cep-storm</module>
         <module>chapter-hadoop-spark</module>
     <module>chapter-dist-computing</module>
-  </modules>
+        <module>chapter-five</module>
+    </modules>
     <dependencyManagement>
         <dependencies>
             <dependency>
