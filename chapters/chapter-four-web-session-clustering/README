@@ -1,0 +1,4 @@
+mvn -Djetty.port=8080 jetty:run
+
+http://localhost:8080/test-session/putperson?name=shamim&age=38
+http://localhost:8081/test-session/getperson?name=shamim

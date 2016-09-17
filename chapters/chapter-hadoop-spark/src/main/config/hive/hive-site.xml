@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <!--
+        Ignite requires query plan to be passed not using local resource.
+    -->
+    <property>
+        <name>hive.rpc.query.plan</name>
+        <value>true</value>
+    </property>
+</configuration>

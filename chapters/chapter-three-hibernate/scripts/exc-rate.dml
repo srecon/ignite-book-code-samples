@@ -1,0 +1,15 @@
+INSERT INTO public.exchangerate (ratedate,usdollar,euro,gbp,region) VALUES (
+TO_DATE('2015-05-01','YYYY-MM-DD'),69.7,75.9,103.01,'Vladimir');
+INSERT INTO public.exchangerate (ratedate,usdollar,euro,gbp,region) VALUES (
+TO_DATE('2015-05-02','YYYY-MM-DD'),71.7,77.1,102.03,'Tver');
+INSERT INTO public.exchangerate (ratedate,usdollar,euro,gbp,region) VALUES (
+TO_DATE('2015-05-02','YYYY-MM-DD'),71.7,77.1,102.03,'Moscow');
+INSERT INTO public.exchangerate (ratedate,usdollar,euro,gbp,region) VALUES (
+TO_DATE('2015-05-02','YYYY-MM-DD'),71.7,77.1,102.03,'Vladimir');
+INSERT INTO public.exchangerate (ratedate,usdollar,euro,gbp,region) VALUES (
+TO_DATE('2015-05-03','YYYY-MM-DD'),71.9,77.4,101.03,'Tver');
+INSERT INTO public.exchangerate (ratedate,usdollar,euro,gbp,region) VALUES (
+TO_DATE('2015-05-03','YYYY-MM-DD'),70.3,76.1,103.07,'Moscow');
+INSERT INTO public.exchangerate (ratedate,usdollar,euro,gbp,region) VALUES (
+TO_DATE('2015-05-03','YYYY-MM-DD'),71.1,77.4,101.01,'Vladimir');
+commit;

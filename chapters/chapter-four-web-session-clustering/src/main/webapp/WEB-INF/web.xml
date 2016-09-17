@@ -1,0 +1,53 @@
+<web-app id="WebApp_ID" version="2.4"
+ 	xmlns="http://java.sun.com/xml/ns/j2ee"
+ 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+ 				http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ 
+ <display-name>Ignite web session clustering example</display-name>
+    <listener>
+        <listener-class>org.apache.ignite.startup.servlet.ServletContextListenerStartup</listener-class>
+    </listener>
+
+ <servlet>
+ 	<servlet-name>dispatcher</servlet-name>
+ 	<servlet-class>
+ 		org.springframework.web.servlet.DispatcherServlet
+ 	</servlet-class>
+ 	<init-param>
+ 		<param-name>contextConfigLocation</param-name>
+ 		<!--<param-value>classpath:META-INF/spring-ignite-cache.xml</param-value>-->
+        <param-value>/WEB-INF/spring-servlet.xml</param-value>
+ 	</init-param>
+ 	<load-on-startup>1</load-on-startup>
+ </servlet>
+ 
+ <servlet-mapping>
+ 	<servlet-name>dispatcher</servlet-name>
+ 	<url-pattern>/</url-pattern>
+ </servlet-mapping>
+ <!-- Ignite -->
+
+    <filter>
+        <filter-name>IgniteWebSessionsFilter</filter-name>
+        <filter-class>org.apache.ignite.cache.websession.WebSessionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>IgniteWebSessionsFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- Ignite config from META-INF folder-->
+    <context-param>
+        <param-name>IgniteConfigurationFilePath</param-name>
+        <param-value>spring-ignite-cache.xml</param-value>
+    </context-param>
+    <!-- Specify the name of Ignite cache for web sessions. -->
+    <context-param>
+        <param-name>IgniteWebSessionsCacheName</param-name>
+        <param-value>session-cache</param-value>
+    </context-param>
+    <context-param>
+        <param-name>IgniteWebSessionsGridName</param-name>
+        <param-value>session-grid</param-value>
+    </context-param>
+</web-app>

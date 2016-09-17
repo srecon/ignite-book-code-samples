@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blu.imdg.mapper.UserMapper">
+
+    <cache type="org.mybatis.caches.ignite.IgniteCacheAdapter" />
+
+    <select id="getEmploee" parameterType="String" resultType="com.blu.imdg.dto.Employee" useCache="true">
+        SELECT * FROM emp WHERE ename = #{ename}
+    </select>
+
+</mapper>
