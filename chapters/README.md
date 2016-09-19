@@ -7,4 +7,5 @@
 | 2 | OS      | Linux, MacOS (10.6 and above), Windows XP and above, Windows Server (2008 and above) |
 
 > To compile, run the following command:
+
 > mvn clean install
