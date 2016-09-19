@@ -1,4 +1,4 @@
-#Code for **book high performance in-memory data grid with Apache Ignite**
+#Code for *book high performance in-memory data grid with Apache Ignite*
 
 ##Prerequisites
 | N | Name    | Value                                                                                |
