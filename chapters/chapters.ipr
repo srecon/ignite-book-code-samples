@@ -101,6 +101,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="camel" />
+        <module name="chapter-bigdata" />
         <module name="chapter-dist-computing" />
         <module name="chapter-five" />
         <module name="chapter-four-sqlqueries" />
@@ -111,6 +112,7 @@
         <module name="chapter-three-hibernate" />
         <module name="chapter-three-mybatis" />
         <module name="chapter-three-offheap" />
+        <module name="flume" />
         <module name="hibernate" />
         <module name="mybatis" />
         <module name="offheap" />
@@ -122,6 +124,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="camel" target="1.5" />
+      <module name="chapter-bigdata" target="1.5" />
       <module name="chapter-cep" target="1.8" />
       <module name="chapter-cep-flume" target="1.7" />
       <module name="chapter-cep-storm" target="1.8" />
@@ -138,6 +141,7 @@
       <module name="chapter-three-offheap" target="1.5" />
       <module name="chapter-three-web-session-clustering" target="1.5" />
       <module name="chapters" target="1.5" />
+      <module name="flume" target="1.5" />
       <module name="hibernate" target="1.5" />
       <module name="mybatis" target="1.5" />
       <module name="offheap" target="1.5" />
@@ -150,15 +154,16 @@
   <component name="CopyrightManager" default="" />
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-bigdata" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-caching/hibernate" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-caching/mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-caching/offheap" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-caching/web-session-clustering" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep/camel" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-cep/flume" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep/storm" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-dist-computing" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-hadoop-spark" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-one" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-installation" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-persistence/sqlqueries" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-persistence/transactions" charset="UTF-8" />
   </component>
@@ -201,9 +206,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/chapter-cep/camel/camel.iml" filepath="$PROJECT_DIR$/chapter-cep/camel/camel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-bigdata/chapter-bigdata.iml" filepath="$PROJECT_DIR$/chapter-bigdata/chapter-bigdata.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" filepath="$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" filepath="$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-one/chapter-one.iml" filepath="$PROJECT_DIR$/chapter-one/chapter-one.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-installation/chapter-installation.iml" filepath="$PROJECT_DIR$/chapter-installation/chapter-installation.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapters.iml" filepath="$PROJECT_DIR$/chapters.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-cep/flume/flume.iml" filepath="$PROJECT_DIR$/chapter-cep/flume/flume.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-caching/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/chapter-caching/hibernate/hibernate.iml" />

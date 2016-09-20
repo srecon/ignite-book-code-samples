@@ -9,9 +9,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.blu.imdg</groupId>
-    <artifactId>chapter-hadoop-spark</artifactId>
+    <artifactId>chapter-bigdata</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>chapter-hadoop-spark</name>
+    <name>chapter-bigdata</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
