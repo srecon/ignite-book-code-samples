@@ -19,7 +19,7 @@
 
     <modules>
         <module>chapter-one</module>
-        <module>chapter-three</module>
+        <module>chapter-three-mybatis</module>
         <module>chapter-three-hibernate</module>
         <module>chapter-three-offheap</module>
         <module>chapter-four-web-session-clustering</module>

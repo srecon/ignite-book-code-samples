@@ -88,6 +88,7 @@
       <module name="chapter-one" target="1.5" />
       <module name="chapter-three" target="1.5" />
       <module name="chapter-three-hibernate" target="1.5" />
+      <module name="chapter-three-mybatis" target="1.5" />
       <module name="chapter-three-offheap" target="1.5" />
       <module name="chapters" target="1.5" />
     </bytecodeTargetLevel>
@@ -106,8 +107,8 @@
     <file url="file://$PROJECT_DIR$/chapter-four/chapter-four-transactions" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-hadoop-spark" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-one" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-three" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-three-hibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-three-mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-three-offheap" charset="UTF-8" />
   </component>
   <component name="EntryPointsManager">
@@ -156,7 +157,6 @@
       <module fileurl="file://$PROJECT_DIR$/chapter-four-web-session-clustering/chapter-four-web-session-clustering.iml" filepath="$PROJECT_DIR$/chapter-four-web-session-clustering/chapter-four-web-session-clustering.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" filepath="$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-one/chapter-one.iml" filepath="$PROJECT_DIR$/chapter-one/chapter-one.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-three/chapter-three.iml" filepath="$PROJECT_DIR$/chapter-three/chapter-three.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-three-hibernate/chapter-three-hibernate.iml" filepath="$PROJECT_DIR$/chapter-three-hibernate/chapter-three-hibernate.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-three-offheap/chapter-three-offheap.iml" filepath="$PROJECT_DIR$/chapter-three-offheap/chapter-three-offheap.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapters.iml" filepath="$PROJECT_DIR$/chapters.iml" />
@@ -1574,39 +1574,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/mortbay/jetty/servlet-api/2.5-20110124/servlet-api-2.5-20110124-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.mybatis.caches:mybatis-ignite:1.0.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/caches/mybatis-ignite/1.0.1/mybatis-ignite-1.0.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/caches/mybatis-ignite/1.0.1/mybatis-ignite-1.0.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/caches/mybatis-ignite/1.0.1/mybatis-ignite-1.0.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.mybatis:mybatis-spring:1.2.4">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/1.2.4/mybatis-spring-1.2.4-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.mybatis:mybatis:3.3.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.3.1/mybatis-3.3.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.3.1/mybatis-3.3.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.3.1/mybatis-3.3.1-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.ow2.asm:asm-all:4.2">

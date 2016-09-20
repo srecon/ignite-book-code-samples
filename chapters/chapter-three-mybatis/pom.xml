@@ -7,11 +7,11 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <groupId>com.blu.imdg</groupId>
-  <artifactId>chapter-three</artifactId>
+  <artifactId>chapter-three-mybatis</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>chapter-three</name>
+  <name>chapter-three-mybatis</name>
   <url>http://maven.apache.org</url>
 
   <properties>
