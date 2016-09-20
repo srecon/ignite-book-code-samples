@@ -5,6 +5,7 @@
     <groupId>com.blu.imdg</groupId>
     <artifactId>chapters</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <relativePath>../../parent</relativePath>
   </parent>
   <groupId>com.blu.imdg</groupId>
   <artifactId>chapter-three-hibernate</artifactId>

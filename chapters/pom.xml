@@ -19,10 +19,10 @@
 
     <modules>
         <module>chapter-one</module>
-        <module>chapter-three-mybatis</module>
-        <module>chapter-three-hibernate</module>
-        <module>chapter-three-offheap</module>
-        <module>chapter-four-web-session-clustering</module>
+        <module>chapter-caching/chapter-three-mybatis</module>
+        <module>chapter-caching/chapter-three-hibernate</module>
+        <module>chapter-caching/chapter-three-offheap</module>
+        <module>chapter-caching/chapter-three-web-session-clustering</module>
         <module>chapter-four/chapter-four-sqlqueries</module>
         <module>chapter-four/chapter-four-transactions</module>
         <module>chapter-cep-flume</module>

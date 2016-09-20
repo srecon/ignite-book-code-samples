@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ArtifactManager">
     <artifact type="war" name="chapter-four-web-session-clustering:war">
-      <output-path>$PROJECT_DIR$/chapter-four-web-session-clustering/target</output-path>
+      <output-path>$PROJECT_DIR$/chapter-three-web-session-clustering/target</output-path>
       <root id="archive" name="WebSessionClustering.war">
         <element id="artifact" artifact-name="chapter-four-web-session-clustering:war exploded" />
       </root>
     </artifact>
     <artifact type="exploded-war" name="chapter-four-web-session-clustering:war exploded">
-      <output-path>$PROJECT_DIR$/chapter-four-web-session-clustering/target/WebSessionClustering</output-path>
+      <output-path>$PROJECT_DIR$/chapter-three-web-session-clustering/target/WebSessionClustering</output-path>
       <root id="root">
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
@@ -40,9 +40,29 @@
           </element>
         </element>
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/chapter-four-web-session-clustering/target/WebSessionClustering/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/chapter-three-web-session-clustering/target/WebSessionClustering/META-INF/MANIFEST.MF" />
         </element>
         <element id="javaee-facet-resources" facet="chapter-four-web-session-clustering/web/Web" />
+      </root>
+    </artifact>
+    <artifact type="war" name="chapter-three-web-session-clustering:war">
+      <output-path>$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/target</output-path>
+      <root id="archive" name="WebSessionClustering.war">
+        <element id="artifact" artifact-name="chapter-three-web-session-clustering:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="chapter-three-web-session-clustering:war exploded">
+      <output-path>$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/target/WebSessionClustering</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="chapter-three-web-session-clustering" />
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/target/WebSessionClustering/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="chapter-three-web-session-clustering/web/Web" />
       </root>
     </artifact>
   </component>
@@ -67,12 +87,12 @@
         <module name="chapter-five" />
         <module name="chapter-four-sqlqueries" />
         <module name="chapter-four-transactions" />
-        <module name="chapter-four-web-session-clustering" />
         <module name="chapter-hadoop-spark" />
         <module name="chapter-one" />
         <module name="chapter-three" />
         <module name="chapter-three-hibernate" />
-        <module name="chapter-three-offheap" />
+        <module name="chapter-three-mybatis" />
+        <module name="chapter-three-web-session-clustering" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -90,32 +110,31 @@
       <module name="chapter-three-hibernate" target="1.5" />
       <module name="chapter-three-mybatis" target="1.5" />
       <module name="chapter-three-offheap" target="1.5" />
+      <module name="chapter-three-web-session-clustering" target="1.5" />
       <module name="chapters" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-caching/chapter-three-hibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-caching/chapter-three-mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep-flume" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep-storm" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-dist-computing" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-four-sqlqueries" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-four-transactions" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-four-web-session-clustering" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-four/chapter-four-sqlqueries" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-four/chapter-four-transactions" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-hadoop-spark" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-one" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-three-hibernate" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-three-mybatis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-three-offheap" charset="UTF-8" />
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/chapter-four-web-session-clustering" />
+    <file type="web" url="file://$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering" />
+    <file type="web" url="file://$PROJECT_DIR$/chapter-three-web-session-clustering" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -154,11 +173,12 @@
       <module fileurl="file://$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" filepath="$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-four/chapter-four-sqlqueries/chapter-four-sqlqueries.iml" filepath="$PROJECT_DIR$/chapter-four/chapter-four-sqlqueries/chapter-four-sqlqueries.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-four/chapter-four-transactions/chapter-four-transactions.iml" filepath="$PROJECT_DIR$/chapter-four/chapter-four-transactions/chapter-four-transactions.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-four-web-session-clustering/chapter-four-web-session-clustering.iml" filepath="$PROJECT_DIR$/chapter-four-web-session-clustering/chapter-four-web-session-clustering.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" filepath="$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-one/chapter-one.iml" filepath="$PROJECT_DIR$/chapter-one/chapter-one.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-three-hibernate/chapter-three-hibernate.iml" filepath="$PROJECT_DIR$/chapter-three-hibernate/chapter-three-hibernate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-three-offheap/chapter-three-offheap.iml" filepath="$PROJECT_DIR$/chapter-three-offheap/chapter-three-offheap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-hibernate/chapter-three-hibernate.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-hibernate/chapter-three-hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-mybatis/chapter-three-mybatis.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-mybatis/chapter-three-mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-offheap/chapter-three-offheap.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-offheap/chapter-three-offheap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/chapter-three-web-session-clustering.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/chapter-three-web-session-clustering.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapters.iml" filepath="$PROJECT_DIR$/chapters.iml" />
     </modules>
   </component>
@@ -256,17 +276,6 @@
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
   </component>
   <component name="libraryTable">
-    <library name="Maven: antlr:antlr:2.7.7">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: aopalliance:aopalliance:1.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/" />
@@ -718,17 +727,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/commons-net/commons-net/3.1/commons-net-3.1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: dom4j:dom4j:1.6.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: io.netty:netty:3.5.12.Final">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty/3.5.12.Final/netty-3.5.12.Final.jar!/" />
@@ -749,17 +747,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/io/netty/netty/3.6.2.Final/netty-3.6.2.Final-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: javassist:javassist:3.12.1.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: javax.activation:activation:1.1">
@@ -795,17 +782,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/javax.inject-1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.1">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: javax.servlet.jsp:jsp-api:2.1">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1.jar!/" />
@@ -815,28 +791,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jsp/jsp-api/2.1/jsp-api-2.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: javax.servlet:javax.servlet-api:3.1.0">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: javax.servlet:jstl:1.2">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: javax.servlet:servlet-api:2.5">
@@ -1213,17 +1167,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-hadoop/1.6.0/ignite-hadoop-1.6.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.ignite:ignite-hibernate:1.2.0-incubating">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-hibernate/1.2.0-incubating/ignite-hibernate-1.2.0-incubating.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-hibernate/1.2.0-incubating/ignite-hibernate-1.2.0-incubating-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-hibernate/1.2.0-incubating/ignite-hibernate-1.2.0-incubating-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.apache.ignite:ignite-indexing:1.6.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-indexing/1.6.0/ignite-indexing-1.6.0.jar!/" />
@@ -1266,17 +1209,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-storm/1.6.0/ignite-storm-1.6.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.apache.ignite:ignite-web:1.6.0">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-web/1.6.0/ignite-web-1.6.0.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-web/1.6.0/ignite-web-1.6.0-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-web/1.6.0/ignite-web-1.6.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.logging.log4j:log4j-api:2.1">
@@ -1354,17 +1286,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/thrift/libthrift/0.9.0/libthrift-0.9.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.apache.tomcat:tomcat-servlet-api:8.0.23">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-servlet-api/8.0.23/tomcat-servlet-api-8.0.23.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-servlet-api/8.0.23/tomcat-servlet-api-8.0.23-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-servlet-api/8.0.23/tomcat-servlet-api-8.0.23-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.velocity:velocity:1.7">
@@ -1464,83 +1385,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/gridgain/ignite-shmem/1.0.0/ignite-shmem-1.0.0-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.hibernate.common:hibernate-commons-annotations:4.0.2.Final">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/common/hibernate-commons-annotations/4.0.2.Final/hibernate-commons-annotations-4.0.2.Final-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.1.Final">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.hibernate:hibernate-core:4.2.6.Final">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.6.Final/hibernate-core-4.2.6.Final.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.6.Final/hibernate-core-4.2.6.Final-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.6.Final/hibernate-core-4.2.6.Final-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.hibernate:hibernate-entitymanager:4.2.6.Final">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.2.6.Final/hibernate-entitymanager-4.2.6.Final.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.2.6.Final/hibernate-entitymanager-4.2.6.Final-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-entitymanager/4.2.6.Final/hibernate-entitymanager-4.2.6.Final-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.javassist:javassist:3.15.0-GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.jboss.logging:jboss-logging:3.1.0.GA">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/logging/jboss-logging/3.1.0.GA/jboss-logging-3.1.0.GA-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.1_spec:1.0.1.Final">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/jboss-transaction-api_1.1_spec-1.0.1.Final-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.mortbay.jetty:jetty-util:6.1.26">
@@ -1697,17 +1541,6 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.0.RELEASE/spring-jdbc-4.1.0.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.springframework:spring-orm:4.1.0.RELEASE">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/4.1.0.RELEASE/spring-orm-4.1.0.RELEASE.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/4.1.0.RELEASE/spring-orm-4.1.0.RELEASE-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-orm/4.1.0.RELEASE/spring-orm-4.1.0.RELEASE-sources.jar!/" />
-      </SOURCES>
-    </library>
     <library name="Maven: org.springframework:spring-tx:4.1.0.RELEASE">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.1.0.RELEASE/spring-tx-4.1.0.RELEASE.jar!/" />
@@ -1717,28 +1550,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/4.1.0.RELEASE/spring-tx-4.1.0.RELEASE-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.springframework:spring-web:4.1.0.RELEASE">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.0.RELEASE/spring-web-4.1.0.RELEASE.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.0.RELEASE/spring-web-4.1.0.RELEASE-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.0.RELEASE/spring-web-4.1.0.RELEASE-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.springframework:spring-webmvc:4.1.0.RELEASE">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.0.RELEASE/spring-webmvc-4.1.0.RELEASE.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.0.RELEASE/spring-webmvc-4.1.0.RELEASE-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.0.RELEASE/spring-webmvc-4.1.0.RELEASE-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.tukaani:xz:1.0">
@@ -1761,17 +1572,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/xerial/snappy/snappy-java/1.0.4.1/snappy-java-1.0.4.1-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: postgresql:postgresql:9.1-901.jdbc4">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901.jdbc4/postgresql-9.1-901.jdbc4-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: tomcat:jasper-compiler:5.5.23">
