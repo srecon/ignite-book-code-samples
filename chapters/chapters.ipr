@@ -60,9 +60,29 @@
           </element>
         </element>
         <element id="directory" name="META-INF">
-          <element id="file-copy" path="$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/target/WebSessionClustering/META-INF/MANIFEST.MF" />
+          <element id="file-copy" path="$PROJECT_DIR$/chapter-caching/web-session-clustering/target/WebSessionClustering/META-INF/MANIFEST.MF" />
         </element>
         <element id="javaee-facet-resources" facet="chapter-three-web-session-clustering/web/Web" />
+      </root>
+    </artifact>
+    <artifact type="war" name="web-session-clustering:war">
+      <output-path>$PROJECT_DIR$/chapter-caching/web-session-clustering/target</output-path>
+      <root id="archive" name="WebSessionClustering.war">
+        <element id="artifact" artifact-name="web-session-clustering:war exploded" />
+      </root>
+    </artifact>
+    <artifact type="exploded-war" name="web-session-clustering:war exploded">
+      <output-path>$PROJECT_DIR$/chapter-caching/web-session-clustering/target/WebSessionClustering</output-path>
+      <root id="root">
+        <element id="directory" name="WEB-INF">
+          <element id="directory" name="classes">
+            <element id="module-output" name="web-session-clustering" />
+          </element>
+        </element>
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/chapter-caching/web-session-clustering/target/WebSessionClustering/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="javaee-facet-resources" facet="web-session-clustering/web/Web" />
       </root>
     </artifact>
   </component>
@@ -92,7 +112,13 @@
         <module name="chapter-three" />
         <module name="chapter-three-hibernate" />
         <module name="chapter-three-mybatis" />
-        <module name="chapter-three-web-session-clustering" />
+        <module name="chapter-three-offheap" />
+        <module name="hibernate" />
+        <module name="mybatis" />
+        <module name="offheap" />
+        <module name="sqlqueries" />
+        <module name="transactions" />
+        <module name="web-session-clustering" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -112,28 +138,35 @@
       <module name="chapter-three-offheap" target="1.5" />
       <module name="chapter-three-web-session-clustering" target="1.5" />
       <module name="chapters" target="1.5" />
+      <module name="hibernate" target="1.5" />
+      <module name="mybatis" target="1.5" />
+      <module name="offheap" target="1.5" />
+      <module name="sqlqueries" target="1.5" />
+      <module name="transactions" target="1.5" />
+      <module name="web-session-clustering" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="" />
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-caching/chapter-three-hibernate" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-caching/chapter-three-mybatis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-caching/hibernate" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-caching/mybatis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-caching/offheap" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-caching/web-session-clustering" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep-flume" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep-storm" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-dist-computing" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-four/chapter-four-sqlqueries" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-four/chapter-four-transactions" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-hadoop-spark" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-one" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-persistence/sqlqueries" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chapter-persistence/transactions" charset="UTF-8" />
   </component>
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering" />
+    <file type="web" url="file://$PROJECT_DIR$/chapter-caching/web-session-clustering" />
     <file type="web" url="file://$PROJECT_DIR$/chapter-three-web-session-clustering" />
   </component>
   <component name="MavenImportPreferences">
@@ -171,15 +204,15 @@
       <module fileurl="file://$PROJECT_DIR$/chapter-cep-flume/chapter-cep-flume.iml" filepath="$PROJECT_DIR$/chapter-cep-flume/chapter-cep-flume.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-cep-storm/chapter-cep-storm.iml" filepath="$PROJECT_DIR$/chapter-cep-storm/chapter-cep-storm.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" filepath="$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-four/chapter-four-sqlqueries/chapter-four-sqlqueries.iml" filepath="$PROJECT_DIR$/chapter-four/chapter-four-sqlqueries/chapter-four-sqlqueries.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-four/chapter-four-transactions/chapter-four-transactions.iml" filepath="$PROJECT_DIR$/chapter-four/chapter-four-transactions/chapter-four-transactions.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" filepath="$PROJECT_DIR$/chapter-hadoop-spark/chapter-hadoop-spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-one/chapter-one.iml" filepath="$PROJECT_DIR$/chapter-one/chapter-one.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-hibernate/chapter-three-hibernate.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-hibernate/chapter-three-hibernate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-mybatis/chapter-three-mybatis.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-mybatis/chapter-three-mybatis.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-offheap/chapter-three-offheap.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-offheap/chapter-three-offheap.iml" />
-      <module fileurl="file://$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/chapter-three-web-session-clustering.iml" filepath="$PROJECT_DIR$/chapter-caching/chapter-three-web-session-clustering/chapter-three-web-session-clustering.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapters.iml" filepath="$PROJECT_DIR$/chapters.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/hibernate/hibernate.iml" filepath="$PROJECT_DIR$/chapter-caching/hibernate/hibernate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/mybatis/mybatis.iml" filepath="$PROJECT_DIR$/chapter-caching/mybatis/mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/offheap/offheap.iml" filepath="$PROJECT_DIR$/chapter-caching/offheap/offheap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-persistence/sqlqueries/sqlqueries.iml" filepath="$PROJECT_DIR$/chapter-persistence/sqlqueries/sqlqueries.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-persistence/transactions/transactions.iml" filepath="$PROJECT_DIR$/chapter-persistence/transactions/transactions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-caching/web-session-clustering/web-session-clustering.iml" filepath="$PROJECT_DIR$/chapter-caching/web-session-clustering/web-session-clustering.iml" />
     </modules>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
