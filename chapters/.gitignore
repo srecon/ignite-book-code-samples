@@ -5,3 +5,6 @@
 /chapter-cep-storm/.idea/
 /chapter-dist-computing/target/
 /chapters.ipr
+/chapters.iml
+/chapters.iws
+/chapter-cep/camel/target/

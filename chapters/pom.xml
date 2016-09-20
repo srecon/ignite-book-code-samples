@@ -25,10 +25,10 @@
         <module>chapter-caching/web-session-clustering</module>
         <module>chapter-persistence/sqlqueries</module>
         <module>chapter-persistence/transactions</module>
-        <module>chapter-cep-flume</module>
-        <module>chapter-cep-storm</module>
         <module>chapter-hadoop-spark</module>
-        <module>camel</module>
+        <module>chapter-cep/flume</module>
+        <module>chapter-cep/storm</module>
+        <module>chapter-cep/camel</module>
         <module>chapter-dist-computing</module>
     </modules>
     <dependencyManagement>
