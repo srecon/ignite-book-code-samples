@@ -28,7 +28,7 @@
         <module>chapter-cep-flume</module>
         <module>chapter-cep-storm</module>
         <module>chapter-hadoop-spark</module>
-        <module>chapter-cep</module>
+        <module>camel</module>
         <module>chapter-dist-computing</module>
     </modules>
     <dependencyManagement>

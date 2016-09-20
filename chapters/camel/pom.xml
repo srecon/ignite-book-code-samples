@@ -9,9 +9,9 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.blu.imdg</groupId>
-    <artifactId>chapter-cep</artifactId>
+    <artifactId>camel</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>chapter-cep</name>
+    <name>camel</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
