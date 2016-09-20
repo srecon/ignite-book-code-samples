@@ -8,11 +8,11 @@
     <relativePath>../../parent</relativePath>
   </parent>
   <groupId>com.blu.imdg</groupId>
-  <artifactId>chapter-three-mybatis</artifactId>
+  <artifactId>mybatis</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>chapter-three-mybatis</name>
+  <name>mybatis</name>
   <url>http://maven.apache.org</url>
 
   <properties>

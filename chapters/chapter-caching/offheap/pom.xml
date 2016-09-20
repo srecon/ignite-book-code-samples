@@ -10,9 +10,9 @@
         <relativePath>../../parent</relativePath>
     </parent>
     <groupId>com.blu.imdg</groupId>
-    <artifactId>chapter-three-offheap</artifactId>
+    <artifactId>offheap</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>chapter-three-offheap</name>
+    <name>offheap</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

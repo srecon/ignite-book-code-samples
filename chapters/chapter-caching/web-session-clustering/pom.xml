@@ -10,10 +10,10 @@
 		<relativePath>../../parent</relativePath>
 	</parent>
 	<groupId>com.blu.imdg</groupId>
-	<artifactId>chapter-three-web-session-clustering</artifactId>
+	<artifactId>web-session-clustering</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
-	<name>chapter-three-web-session-clustering</name>
+	<name>web-session-clustering</name>
 
 	<properties>
 		<springframework.version>4.1.0.RELEASE</springframework.version>
