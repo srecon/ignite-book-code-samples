@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>chapter-five</artifactId>
+    <artifactId>chapter-dist-computing</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.apache.ignite</groupId>

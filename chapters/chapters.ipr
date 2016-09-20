@@ -50,14 +50,6 @@
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
-      <entry name="!?*.form" />
-      <entry name="!?*.class" />
-      <entry name="!?*.groovy" />
-      <entry name="!?*.scala" />
-      <entry name="!?*.flex" />
-      <entry name="!?*.kt" />
-      <entry name="!?*.clj" />
-      <entry name="!?*.aj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
@@ -71,6 +63,7 @@
         <module name="chapter-cep" />
         <module name="chapter-cep-flume" />
         <module name="chapter-cep-storm" />
+        <module name="chapter-dist-computing" />
         <module name="chapter-five" />
         <module name="chapter-four-sqlqueries" />
         <module name="chapter-four-transactions" />
@@ -86,7 +79,7 @@
       <module name="chapter-cep" target="1.8" />
       <module name="chapter-cep-flume" target="1.7" />
       <module name="chapter-cep-storm" target="1.8" />
-      <module name="chapter-dist-computing" target="1.5" />
+      <module name="chapter-dist-computing" target="1.8" />
       <module name="chapter-five" target="1.8" />
       <module name="chapter-four-sqlqueries" target="1.8" />
       <module name="chapter-four-transactions" target="1.8" />
@@ -106,7 +99,6 @@
     <file url="file://$PROJECT_DIR$/chapter-cep-flume" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-cep-storm" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-dist-computing" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/chapter-five" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-four-sqlqueries" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-four-transactions" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter-four-web-session-clustering" charset="UTF-8" />
@@ -156,6 +148,7 @@
       <module fileurl="file://$PROJECT_DIR$/chapter-cep/chapter-cep.iml" filepath="$PROJECT_DIR$/chapter-cep/chapter-cep.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-cep-flume/chapter-cep-flume.iml" filepath="$PROJECT_DIR$/chapter-cep-flume/chapter-cep-flume.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-cep-storm/chapter-cep-storm.iml" filepath="$PROJECT_DIR$/chapter-cep-storm/chapter-cep-storm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" filepath="$PROJECT_DIR$/chapter-dist-computing/chapter-dist-computing.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-four-sqlqueries/chapter-four-sqlqueries.iml" filepath="$PROJECT_DIR$/chapter-four-sqlqueries/chapter-four-sqlqueries.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-four-transactions/chapter-four-transactions.iml" filepath="$PROJECT_DIR$/chapter-four-transactions/chapter-four-transactions.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter-four-web-session-clustering/chapter-four-web-session-clustering.iml" filepath="$PROJECT_DIR$/chapter-four-web-session-clustering/chapter-four-web-session-clustering.iml" />
