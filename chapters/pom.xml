@@ -23,12 +23,12 @@
         <module>chapter-three-hibernate</module>
         <module>chapter-three-offheap</module>
         <module>chapter-four-web-session-clustering</module>
-        <module>chapter-cep</module>
-        <module>chapter-four-sqlqueries</module>
-        <module>chapter-four-transactions</module>
+        <module>chapter-four/chapter-four-sqlqueries</module>
+        <module>chapter-four/chapter-four-transactions</module>
         <module>chapter-cep-flume</module>
         <module>chapter-cep-storm</module>
         <module>chapter-hadoop-spark</module>
+        <module>chapter-cep</module>
         <module>chapter-dist-computing</module>
     </modules>
     <dependencyManagement>

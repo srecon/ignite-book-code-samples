@@ -6,9 +6,10 @@
         <artifactId>chapters</artifactId>
         <groupId>com.blu.imdg</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../parent</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>chapter-four-sqlqueries</artifactId>
+    <artifactId>chapter-four-transactions</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
@@ -67,10 +68,10 @@
                     <execution>
                         <id>build-query</id>
                         <configuration>
-                            <mainClass>com.blu.imdg.SqlQueryEmployees</mainClass>
+                            <mainClass>com.blu.imdg.SimpleTransactions</mainClass>
                             <attachToBuild>true</attachToBuild>
                             <classifier>onejar</classifier>
-                            <filename>sql-query-employees-runnable.jar</filename>
+                            <filename>transactions-runnable.jar</filename>
                         </configuration>
                         <goals>
                             <goal>one-jar</goal>
