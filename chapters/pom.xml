@@ -23,8 +23,7 @@
         <module>chapter-caching/hibernate</module>
         <module>chapter-caching/offheap</module>
         <module>chapter-caching/web-session-clustering</module>
-        <module>chapter-persistence/sqlqueries</module>
-        <module>chapter-persistence/transactions</module>
+        <module>chapter-persistence</module>
         <module>chapter-bigdata</module>
         <module>chapter-cep/flume</module>
         <module>chapter-cep/storm</module>
