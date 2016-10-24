@@ -67,7 +67,7 @@
                     <execution>
                         <id>build-query</id>
                         <configuration>
-                            <mainClass>com.blu.imdg.TextQueryKLADR</mainClass>
+                            <mainClass>com.blu.imdg.TextQueryExample</mainClass>
                             <attachToBuild>true</attachToBuild>
                             <classifier>onejar</classifier>
                             <filename>textquery-runnable.jar</filename>
