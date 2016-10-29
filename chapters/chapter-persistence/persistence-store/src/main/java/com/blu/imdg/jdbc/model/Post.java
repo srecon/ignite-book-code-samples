@@ -3,12 +3,10 @@ package com.blu.imdg.jdbc.model;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Objects;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Created by developer on 9/26/16.
  */
-@Document
 public class Post implements Serializable {
     private static final long serialVersionUID = 0L;
 

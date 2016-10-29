@@ -40,7 +40,7 @@ public class CacheStoreSample {
     public static void main(String[] args) throws Exception {
 
         jdbcStoreExample();
-        nosqlStore();
+//        nosqlStore();
 
     }
 

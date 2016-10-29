@@ -44,7 +44,7 @@ public class MongoDBStore extends CacheStoreAdapter<String, MongoPost> implement
     }
 
     @Override public void start() throws IgniteException {
-        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("application-context.xml");
+        ConfigurableApplicationContext context = new ClassPathXmlApplicationContext("mongo-context.xml");
         postRepository = context.getBean(PostRepository.class);
         logger.info(String.valueOf(postRepository));
         mongoOperations = context.getBean(MongoOperations.class);

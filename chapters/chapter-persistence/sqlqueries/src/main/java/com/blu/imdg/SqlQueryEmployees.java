@@ -90,9 +90,6 @@ public class SqlQueryEmployees {
             // Example for query that uses grouping.
             groupByQuery();
 
-            // Full text query example.
-            textQuery();
-
             log("Sql query example finished.");
         }
     }
@@ -291,21 +288,6 @@ public class SqlQueryEmployees {
         logDecorated("==Average salaries per Department (group-by query)==", cache.query(qry.setArgs(500)).getAll());
     }
 
-    /**
-     * Example for TEXT queries using LUCENE-based indexing of people's job name.
-     */
-    private static void textQuery() {
-        IgniteCache<Integer, Employee> cache = Ignition.ignite().cache(EMPLOYEE_CACHE_NAME);
-
-        //  Query for all people are working as a "Salesman".
-        TextQuery<Integer, Employee> salesman = new TextQuery<>(Employee.class, "Salesman");
-
-        // Query for all people are working as a "Manager".
-        TextQuery<Integer, Employee> manager = new TextQuery<>(Employee.class, "Manager");
-
-        log("==Following people are working as a 'Salesman'==", cache.query(salesman).getAll());
-        log("==Following people are working as a 'Manager'==", cache.query(manager).getAll());
-    }
 
     /**
      * @param parseDateText
