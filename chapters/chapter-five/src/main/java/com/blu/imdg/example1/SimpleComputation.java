@@ -14,7 +14,7 @@ import static com.blu.imdg.common.CommonConstants.CLIENT_CONFIG;
 /**
  * Created by mikl on 19.08.16.
  */
-//mvn exec:java -Dexec.mainClass=SimpleComputation
+//mvn exec:java -Dexec.mainClass=com.blu.imdg.example1.SimpleComputation
 public class SimpleComputation {
 
 
