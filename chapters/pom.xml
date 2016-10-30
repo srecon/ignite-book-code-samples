@@ -18,19 +18,17 @@
     </properties>
 
     <modules>
-        <module>chapter-one</module>
-        <module>chapter-three</module>
-        <module>chapter-three-hibernate</module>
-        <module>chapter-three-offheap</module>
-        <module>chapter-four-web-session-clustering</module>
-        <module>chapter-cep</module>
-        <module>chapter-four-sqlqueries</module>
-        <module>chapter-four-transactions</module>
-        <module>chapter-cep-flume</module>
-        <module>chapter-cep-storm</module>
-        <module>chapter-hadoop-spark</module>
-    <module>chapter-dist-computing</module>
-        <module>chapter-five</module>
+        <module>chapter-installation</module>
+        <module>chapter-caching/mybatis</module>
+        <module>chapter-caching/hibernate</module>
+        <module>chapter-caching/offheap</module>
+        <module>chapter-caching/web-session-clustering</module>
+        <module>chapter-persistence</module>
+        <module>chapter-bigdata</module>
+        <module>chapter-cep/flume</module>
+        <module>chapter-cep/storm</module>
+        <module>chapter-cep/camel</module>
+        <module>chapter-dist-computing</module>
     </modules>
     <dependencyManagement>
         <dependencies>
@@ -52,11 +50,6 @@
             <dependency>
                 <groupId>org.apache.ignite</groupId>
                 <artifactId>ignite-slf4j</artifactId>
-                <version>${ignite.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.ignite</groupId>
-                <artifactId>ignite-log4j</artifactId>
                 <version>${ignite.version}</version>
             </dependency>
             <dependency>
