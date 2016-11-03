@@ -29,7 +29,9 @@ public class CacheStoreSample {
       Cache name to store posts.
       */
     private static final String POST_CACHE_NAME = CacheStoreSample.class.getSimpleName() + "-post";
-    private static Logger logger = LoggerFactory.getLogger(CacheStoreSample.class);
+    private static Logger LOGGER = LoggerFactory.getLogger(CacheStoreSample.class);
+    private static final String POSTGRESQL = "postgresql";
+    private static final String MONGODB = "mongodb";
 
     /**
      * This is an entry point of CacheStoreSample, the ignite configuration lies upon resources directory as
@@ -37,10 +39,17 @@ public class CacheStoreSample {
      *
      * @param args Command line arguments, none required.
      */
-    public static void main(String[] args) throws Exception {
-
-        jdbcStoreExample();
-//        nosqlStore();
+    public static void main(String[] args) throws Exception
+    {
+        if(args.length <= 0 ){
+            LOGGER.error("Usages! java -jar .\\target\\cache-store-runnable.jar postgresql|mongodb");
+            System.exit(0);
+        }
+        if(args[0].equalsIgnoreCase(POSTGRESQL)){
+            jdbcStoreExample();
+        } else if (args[0].equalsIgnoreCase(MONGODB)){
+            nosqlStore();
+        }
 
     }
 
@@ -148,7 +157,7 @@ public class CacheStoreSample {
      * @param msg String.
      */
     private static void log(String msg) {
-        logger.info("\t" + msg);
+        LOGGER.info("\t" + msg);
     }
 
 }

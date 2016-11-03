@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Let's have a look at simple implemention of CacheStore for Postgres DB. As says documentation CacheStoreAdapter
+ * Simple implementation of CacheStore for Postgres DB. CacheStoreAdapter
  * provides default implementation for loadAll(), writeAll(), and deleteAll() methods which simply iterates through all
  * keys one by one. Created by developer on 9/25/16.
  */
