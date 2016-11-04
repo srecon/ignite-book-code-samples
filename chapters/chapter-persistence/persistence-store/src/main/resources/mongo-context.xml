@@ -12,15 +12,10 @@
 
     <mongo:db-factory id="mongoDbFactory" dbname="test" mongo-ref="mongo" />
 
-    <mongo:mapping-converter id="mongoConverter" base-package="com.blu.imdg.nosql">
-        <mongo:custom-converters base-package="com.blu.imdg.nosql"/>
-    </mongo:mapping-converter>
-
     <mongo:repositories base-package="com.blu.imdg.nosql" mongo-template-ref="mongoTemplate"/>
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg ref="mongoDbFactory" />
-        <constructor-arg ref="mongoConverter" />
     </bean>
 
 
