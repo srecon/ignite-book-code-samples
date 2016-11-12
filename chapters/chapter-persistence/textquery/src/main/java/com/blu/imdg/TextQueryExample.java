@@ -5,8 +5,11 @@ import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.cache.CacheMode;
+import org.apache.ignite.cache.query.QueryCursor;
+import org.apache.ignite.cache.query.ScanQuery;
 import org.apache.ignite.cache.query.TextQuery;
 import org.apache.ignite.configuration.CacheConfiguration;
+import org.apache.ignite.internal.processors.cache.CacheEntryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +17,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Iterator;
 import java.util.stream.Stream;
 
 /**
@@ -53,7 +57,8 @@ public class TextQueryExample {
                 initialize();
 
                 // Full text query example.
-                textQuery();
+                //textQuery();
+                scanQuery();
 
                 log("Text query example finished.");
             }
@@ -66,7 +71,7 @@ public class TextQueryExample {
      *
      * @throws InterruptedException In case of error.
      */
-    private static void initialize() throws InterruptedException {
+    private static void initialize() throws InterruptedException, IOException {
         IgniteCache<Long, Company> companyCache = Ignition.ignite().cache(COMPANY_CACHE_NAME);
 
         // Clear caches before start.
@@ -75,6 +80,8 @@ public class TextQueryExample {
         // Companies
         try (
                 Stream<String> lines = Files.lines(Paths.get(TextQueryExample.class.getClassLoader().getResource("USA_NY_email_addresses.csv").toURI()));
+                //Stream<String> lines = Files.lines(Paths.get(ClassLoader.getSystemResource("/USA_NY_email_addresses.csv").toURI()  ));
+                //SpeedViolationTopology.class.getClassLoader().getResourceAsStream("ignite-storm.properties");
         ) {
             lines
                     .skip(1)
@@ -86,6 +93,7 @@ public class TextQueryExample {
             log(e.getMessage());
 
         }
+
         // Wait 1 second to be sure that all nodes processed put requests.
         Thread.sleep(1000);
     }
@@ -105,6 +113,22 @@ public class TextQueryExample {
 
         log("==So many companies with information about 'John'==", cache.query(john).getAll());
         log("==A company which name is starting as 'Primavera'==", cache.query(primavera).getAll());
+    }
+    private static void scanQuery() {
+        IgniteCache<Long, Company> companyCache = Ignition.ignite().cache(COMPANY_CACHE_NAME);
+
+        //  Query for all companies which the city 'NEW YORK' - NewYork.
+        QueryCursor cursor = companyCache.query(new ScanQuery<Long, Company>((k, p) -> p.getCity().equalsIgnoreCase("NEW YORK")));
+
+        for(Iterator ite = cursor.iterator(); ite.hasNext();)
+        {
+            CacheEntryImpl company = (CacheEntryImpl) ite.next();
+
+            log(((Company)company.getValue()).getCompanyName());
+        }
+
+        cursor.close();
+
     }
 
     /**
