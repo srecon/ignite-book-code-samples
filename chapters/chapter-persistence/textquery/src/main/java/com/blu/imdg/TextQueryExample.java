@@ -80,8 +80,7 @@ public class TextQueryExample {
         // Companies
         try (
                 Stream<String> lines = Files.lines(Paths.get(TextQueryExample.class.getClassLoader().getResource("USA_NY_email_addresses.csv").toURI()));
-                //Stream<String> lines = Files.lines(Paths.get(ClassLoader.getSystemResource("/USA_NY_email_addresses.csv").toURI()  ));
-                //SpeedViolationTopology.class.getClassLoader().getResourceAsStream("ignite-storm.properties");
+
         ) {
             lines
                     .skip(1)
