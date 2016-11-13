@@ -1,6 +1,7 @@
 package com.blu.imdg;
 
 import com.blu.imdg.model.Company;
+
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.Ignition;
@@ -9,15 +10,21 @@ import org.apache.ignite.cache.query.QueryCursor;
 import org.apache.ignite.cache.query.ScanQuery;
 import org.apache.ignite.cache.query.TextQuery;
 import org.apache.ignite.configuration.CacheConfiguration;
+
 import org.apache.ignite.internal.processors.cache.CacheEntryImpl;
+import org.apache.ignite.lang.IgniteBiPredicate;
+import org.apache.ignite.lang.IgniteClosure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+import javax.cache.Cache;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Iterator;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -125,7 +132,9 @@ public class TextQueryExample {
         IgniteCache<Long, Company> companyCache = Ignition.ignite().cache(COMPANY_CACHE_NAME);
 
         //  Query for all companies which the city 'NEW YORK' - NewYork.
-        QueryCursor cursor = companyCache.query(new ScanQuery<Long, Company>((k, p) -> p.getCity().equalsIgnoreCase("NEW YORK")));
+        QueryCursor cursor = companyCache.query(new ScanQuery<Long, Company>((k, p) -> p.getCity().equalsIgnoreCase("NEW YORK") ));
+
+
 
         for (Iterator ite = cursor.iterator(); ite.hasNext(); ) {
             CacheEntryImpl company = (CacheEntryImpl) ite.next();
