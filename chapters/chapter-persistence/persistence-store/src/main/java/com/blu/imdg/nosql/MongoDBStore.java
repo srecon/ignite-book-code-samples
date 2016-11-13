@@ -54,7 +54,7 @@ public class MongoDBStore extends CacheStoreAdapter<String, MongoPost> implement
     }
 
     @Override public void stop() throws IgniteException {
-        if (mongoOperations.collectionExists(MongoPost.class))
-            mongoOperations.dropCollection(MongoPost.class);
+//        if (mongoOperations.collectionExists(MongoPost.class))
+//            mongoOperations.dropCollection(MongoPost.class);
     }
 }
