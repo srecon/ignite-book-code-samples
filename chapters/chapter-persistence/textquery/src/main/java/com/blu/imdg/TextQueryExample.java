@@ -122,10 +122,10 @@ public class TextQueryExample {
         TextQuery<Integer, Company> john = new TextQuery<>(Company.class, "John");
 
         //  Query for all companies which has a text "primavera".
-        TextQuery<Integer, Company> primavera = new TextQuery<>(Company.class, "Primavera");
+        TextQuery<Integer, Company> primavera = new TextQuery<>(Company.class, "beauty saloon");
 
         log("==So many companies with information about 'John'==", cache.query(john).getAll());
-        log("==A company which name is starting as 'Primavera'==", cache.query(primavera).getAll());
+        log("==A company which name with ' beauty salon'==", cache.query(primavera).getAll());
     }
 
     private static void scanQuery() {
@@ -133,8 +133,6 @@ public class TextQueryExample {
 
         //  Query for all companies which the city 'NEW YORK' - NewYork.
         QueryCursor cursor = companyCache.query(new ScanQuery<Long, Company>((k, p) -> p.getCity().equalsIgnoreCase("NEW YORK") ));
-
-
 
         for (Iterator ite = cursor.iterator(); ite.hasNext(); ) {
             CacheEntryImpl company = (CacheEntryImpl) ite.next();
