@@ -22,7 +22,7 @@ public class HttpAuditEmulator {
     @GET
     @Path("/log")
     @Produces(MediaType.TEXT_PLAIN)
-    public String sayPlainTextHello(
+    public String acceptResponse(
             @QueryParam("msgId") String msgId,
             @QueryParam("validationResult") boolean result
     ) {
