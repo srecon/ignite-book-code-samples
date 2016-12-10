@@ -20,9 +20,8 @@ import java.util.Map;
 /**
  * Created by mzheludkov on 30.06.16.
  */
-//mvn exec:java -Dexec.mainClass=message.ExampleWithLambda
+//mvn exec:java -Dexec.mainClass=com.blu.imdg.example3.ForkJoinComputation
 public class ForkJoinComputation {
-
 
     public static void main(String[] args) throws IOException {
 

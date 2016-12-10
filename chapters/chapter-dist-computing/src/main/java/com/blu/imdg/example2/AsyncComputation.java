@@ -13,10 +13,8 @@ import java.io.IOException;
 /**
  * Created by mzheludkov on 30.06.16.
  */
-//mvn exec:java -Dexec.mainClass=message.ExampleWithLambda
+//mvn exec:java -Dexec.mainClass=com.blu.imdg.example2.AsyncComputation
 public class AsyncComputation {
-
-
 
     public static void main(String[] args) throws IOException {
         String sample1 = TestDataGenerator.getSample1();
@@ -42,8 +40,8 @@ public class AsyncComputation {
             });
 
 
-            System.out.println("Presse ENTER to exit!");
-            System.in.read();
+            //System.out.println("Presse ENTER to exit!");
+            //System.in.read();
         }
     }
 
