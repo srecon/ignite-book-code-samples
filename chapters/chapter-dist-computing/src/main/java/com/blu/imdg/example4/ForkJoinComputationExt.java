@@ -21,6 +21,10 @@ import static com.blu.imdg.common.CommonConstants.CLIENT_CONFIG;
 
 /**
  * Created by mikl on 14.07.16.
+ * Run http simulator: mvn exec:java -Dexec.mainClass=com.blu.imdg.common.HttpAuditEmulator
+ * Run Ignite node:  mvn clean package exec:java -Dexec.mainClass=com.blu.imdg.StartCacheNode
+ * Run the applicaion: mvn exec:java -Dexec.mainClass=com.blu.imdg.example4.ForkJoinComputationExt
+ *
  */
 public class ForkJoinComputationExt extends ComputeTaskSplitAdapter<ValidateMessage[], Boolean> {
 

@@ -1,19 +1,30 @@
 package com.blu.imdg;
 
 import com.blu.imdg.model.Company;
+
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
 import org.apache.ignite.Ignition;
 import org.apache.ignite.cache.CacheMode;
+import org.apache.ignite.cache.query.QueryCursor;
+import org.apache.ignite.cache.query.ScanQuery;
 import org.apache.ignite.cache.query.TextQuery;
 import org.apache.ignite.configuration.CacheConfiguration;
+
+import org.apache.ignite.internal.processors.cache.CacheEntryImpl;
+import org.apache.ignite.lang.IgniteBiPredicate;
+import org.apache.ignite.lang.IgniteClosure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+import javax.cache.Cache;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Iterator;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -22,6 +33,8 @@ import java.util.stream.Stream;
 public class TextQueryExample {
 
     private static Logger logger = LoggerFactory.getLogger(TextQueryExample.class);
+    private static final String SCAN_QUERY = "scanquery";
+    private static final String TEXT_QUERY = "textquery";
 
     /*
       Partitioned cache name to store companies.
@@ -49,24 +62,30 @@ public class TextQueryExample {
             try (
                     IgniteCache<Long, Company> employeeCache = ignite.createCache(employeeCacheCfg)
             ) {
-                // Populate cache.
+                if (args.length <= 0) {
+                    logger.error("Usages! java -jar .\\target\\cache-store-runnable.jar scanquery|textquery");
+                    System.exit(0);
+                }
                 initialize();
 
-                // Full text query example.
-                textQuery();
+                if (args[0].equalsIgnoreCase(SCAN_QUERY)) {
+                    scanQuery();
+                    log("Scan query example finished.");
+                } else if (args[0].equalsIgnoreCase(TEXT_QUERY)) {
+                    textQuery();
+                    log("Text query example finished.");
+                }
 
-                log("Text query example finished.");
             }
         }
     }
 
     /**
-     * Let's fill ignite cache with test data. Data are taken from oracle's study test scheme EMP. The structure of
-     * those scheme you can see below resources folder of this module.
+     * Let's fill ignite cache with test data.
      *
      * @throws InterruptedException In case of error.
      */
-    private static void initialize() throws InterruptedException {
+    private static void initialize() throws InterruptedException, IOException {
         IgniteCache<Long, Company> companyCache = Ignition.ignite().cache(COMPANY_CACHE_NAME);
 
         // Clear caches before start.
@@ -75,6 +94,7 @@ public class TextQueryExample {
         // Companies
         try (
                 Stream<String> lines = Files.lines(Paths.get(TextQueryExample.class.getClassLoader().getResource("USA_NY_email_addresses.csv").toURI()));
+
         ) {
             lines
                     .skip(1)
@@ -86,6 +106,7 @@ public class TextQueryExample {
             log(e.getMessage());
 
         }
+
         // Wait 1 second to be sure that all nodes processed put requests.
         Thread.sleep(1000);
     }
@@ -101,10 +122,26 @@ public class TextQueryExample {
         TextQuery<Integer, Company> john = new TextQuery<>(Company.class, "John");
 
         //  Query for all companies which has a text "primavera".
-        TextQuery<Integer, Company> primavera = new TextQuery<>(Company.class, "Primavera");
+        TextQuery<Integer, Company> primavera = new TextQuery<>(Company.class, "beauty saloon");
 
         log("==So many companies with information about 'John'==", cache.query(john).getAll());
-        log("==A company which name is starting as 'Primavera'==", cache.query(primavera).getAll());
+        log("==A company which name with ' beauty salon'==", cache.query(primavera).getAll());
+    }
+
+    private static void scanQuery() {
+        IgniteCache<Long, Company> companyCache = Ignition.ignite().cache(COMPANY_CACHE_NAME);
+
+        //  Query for all companies which the city 'NEW YORK' - NewYork.
+        QueryCursor cursor = companyCache.query(new ScanQuery<Long, Company>((k, p) -> p.getCity().equalsIgnoreCase("NEW YORK") ));
+
+        for (Iterator ite = cursor.iterator(); ite.hasNext(); ) {
+            CacheEntryImpl company = (CacheEntryImpl) ite.next();
+
+            log(((Company) company.getValue()).getCompanyName());
+        }
+
+        cursor.close();
+
     }
 
     /**

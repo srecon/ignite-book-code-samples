@@ -17,9 +17,6 @@ import static com.blu.imdg.common.CommonConstants.CLIENT_CONFIG;
 //mvn exec:java -Dexec.mainClass=com.blu.imdg.example1.SimpleComputation
 public class SimpleComputation {
 
-
-
-
     public static void main(String[] args) throws IOException {
         String sample1 = TestDataGenerator.getSample1();
         byte[] vaidateSchema = TestDataGenerator.getValidateSchema();

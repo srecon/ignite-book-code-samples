@@ -53,7 +53,7 @@ public class CacheStoreSample {
 
     }
 
-    private static void jdbcStoreExample() {
+    private static void jdbcStoreExample() throws Exception{
         //let's make a dynamic cache on the fly which is distributed across all running nodes.
         //the same configuration you would probably set in configuration xml format
         IgniteConfiguration cfg = new IgniteConfiguration();
@@ -99,7 +99,8 @@ public class CacheStoreSample {
             }
 
             log("PersistenceStore example finished.");
-            ignite.destroyCache("dynamicCache");
+            //ignite.destroyCache("dynamicCache");
+            Thread.sleep(Integer.MAX_VALUE);
         }
     }
 

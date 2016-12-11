@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Created by mikl on 19.08.16.
  */
-//mvn exec:java -Dexec.mainClass=StartCacheNode
+//mvn exec:java -Dexec.mainClass=com.blu.imdg.StartCacheNode
 public class StartCacheNode {
     public static void main(String[] args) {
         try (Ignite ignite = Ignition.start("org/book/examples/cache-node-config.xml")) {
