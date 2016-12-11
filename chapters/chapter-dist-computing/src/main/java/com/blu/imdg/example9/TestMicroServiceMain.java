@@ -8,6 +8,7 @@ import com.blu.imdg.example9.exception.AccountNotFoundException;
 import com.blu.imdg.example9.exception.LogServiceException;
 import org.apache.ignite.Ignite;
 import org.apache.ignite.IgniteCache;
+import org.apache.ignite.IgniteServices;
 import org.apache.ignite.Ignition;
 
 import java.math.BigDecimal;
@@ -22,17 +23,21 @@ public class TestMicroServiceMain {
 
             IgniteCache<AccountCacheKey, AccountCacheData> cache = BankDataGenerator.createBankCache(ignite);
 
-            ignite.services().deployNodeSingleton(LogService.NAME, new LogServiceImpl());
-            ignite.services().deployNodeSingleton(BankService.NAME, new BankServiceImpl());
+            IgniteServices services = ignite.services().withAsync();
 
+            services.deployNodeSingleton(LogService.NAME, new LogServiceImpl());
+            services.future().get();
 
-            BankService bankService = ignite.services().serviceProxy(BankService.NAME, BankService.class, /*not-sticky*/false);
+            services.deployNodeSingleton(BankService.NAME, new BankServiceImpl());
+            services.future().get();
+
+            BankService bankService = services.serviceProxy(BankService.NAME, BankService.class, /*not-sticky*/false);
 
             System.out.println("result=" + bankService.validateOperation(BankDataGenerator.TEST_ACCOUNT, new BigDecimal(50)));
             System.out.println("result1=" + bankService.validateOperation(BankDataGenerator.TEST_ACCOUNT, new BigDecimal(40)));
             System.out.println("result2=" + bankService.validateOperation(BankDataGenerator.TEST_ACCOUNT, new BigDecimal(180)));
 
-            ignite.services().cancel(BankService.NAME);
+            services.cancel(BankService.NAME);
         }
     }
 }
