@@ -11,6 +11,9 @@ import org.apache.ignite.compute.ComputeTaskSplitAdapter;
 import org.apache.ignite.configuration.CacheConfiguration;
 import com.blu.imdg.common.TestDataGenerator;
 import com.blu.imdg.example3.ValidateMessage;
+import org.apache.ignite.configuration.IgniteConfiguration;
+import org.apache.ignite.spi.checkpoint.cache.CacheCheckpointSpi;
+import org.apache.ignite.spi.failover.always.AlwaysFailoverSpi;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
@@ -45,6 +48,13 @@ public class ForkJoinWithCheckpointComputation extends ComputeTaskSplitAdapter<V
         try (Ignite ignite = Ignition.start(CLIENT_CONFIG)) {
             IgniteCompute compute = ignite.compute();
             CacheConfiguration cacheConfiguration = new CacheConfiguration("checkpoints");
+            // explicitly uses of checkpoint
+            CacheCheckpointSpi cacheCheckpointSpi = new CacheCheckpointSpi();
+            cacheCheckpointSpi.setCacheName("checkpointCache");
+            //cacheConfiguration.setC
+            ignite.configuration().setCheckpointSpi(cacheCheckpointSpi)
+                                  .setFailoverSpi(new AlwaysFailoverSpi());
+            // create or get cache
             ignite.getOrCreateCache(cacheConfiguration);
 
             ValidateMessage[] validateMessages = TestDataGenerator.getValidateMessages();
