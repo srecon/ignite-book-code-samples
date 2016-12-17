@@ -44,7 +44,7 @@ public class TestAccountSavingsMain {
                 return cashBack;
             });
 
-            System.out.println("result="+result);
+            System.out.println("CashBack="+result);
 
         }
     }
