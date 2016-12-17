@@ -25,23 +25,23 @@ public class TestAccountSavingsMain {
             IgniteCompute compute = ignite.compute();
 
             IgniteCache<AccountCacheKey, AccountCacheData> cache = BankDataGenerator.createBankCache(ignite);
-            IgniteCache<String, SavingsDictionaryData> savingsCache = BankDataGenerator.initSavigsCache(ignite);
+            IgniteCache<String, CashBackDictionaryData> savingsCache = BankDataGenerator.initSavigsCache(ignite);
 
             SqlFieldsQuery sql = new SqlFieldsQuery("select * from TransactionData where account = ?");
 
             BigDecimal result = compute.affinityCall(BankDataGenerator.ACCOUNT_CACHE, new AccountKey(BankDataGenerator.TEST_ACCOUNT), () -> {
-                //download all transactins for this account
+                //download all transactions for this account
                 List<List<?>> data = cache.query(sql.setArgs(BankDataGenerator.TEST_ACCOUNT)).getAll();
-                BigDecimal savings = new BigDecimal(0);
+                BigDecimal cashBack = new BigDecimal(0);
                 for (List row : data) {
                     TransactionKey key = (TransactionKey) row.get(0);
                     TransactionData tr = (TransactionData) row.get(1);
 
-                    SavingsDictionaryData savingsDictionaryData = savingsCache.get(tr.getTransactionType());
-                    savings = savings.add(tr.getSum().multiply(savingsDictionaryData.getSavingsPercent()));
+                    CashBackDictionaryData cashBackDictionaryData = savingsCache.get(tr.getTransactionType());
+                    cashBack = cashBack.add(tr.getSum().multiply(cashBackDictionaryData.getCashBackPercent()));
                 }
-                System.out.println("savings="+savings);
-                return savings;
+                //System.out.println("savings="+cashBack);
+                return cashBack;
             });
 
             System.out.println("result="+result);

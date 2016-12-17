@@ -27,7 +27,7 @@ public class BankDataGenerator {
                 .setIndexedTypes(
                         AccountKey.class, AccountData.class,
                         TransactionKey.class, TransactionData.class,
-                        String.class, SavingsDictionaryData.class
+                        String.class, CashBackDictionaryData.class
                 );
 
         IgniteCache<AccountCacheKey, AccountCacheData> result = ignite.getOrCreateCache(accountCacheCfg);
@@ -35,12 +35,12 @@ public class BankDataGenerator {
         return initData(result);
     }
 
-    public static IgniteCache<String, SavingsDictionaryData> initSavigsCache(Ignite ignite) {
+    public static IgniteCache<String, CashBackDictionaryData> initSavigsCache(Ignite ignite) {
         CacheConfiguration savingsCacheCfg = new CacheConfiguration().setName(SAVINGS_CACHE);
-        IgniteCache<String, SavingsDictionaryData> result = ignite.getOrCreateCache(savingsCacheCfg);
+        IgniteCache<String, CashBackDictionaryData> result = ignite.getOrCreateCache(savingsCacheCfg);
         result.removeAll();
-        result.put("meal", new SavingsDictionaryData(new BigDecimal(0.01),"meal shopping"));;
-        result.put("entertainment", new SavingsDictionaryData(new BigDecimal(0.02),"entertainment"));;
+        result.put("meal", new CashBackDictionaryData(new BigDecimal(0.01),"meal shopping"));;
+        result.put("entertainment", new CashBackDictionaryData(new BigDecimal(0.02),"entertainment"));;
         return result;
     }
 

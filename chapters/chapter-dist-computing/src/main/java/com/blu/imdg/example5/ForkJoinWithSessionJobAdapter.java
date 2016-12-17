@@ -45,6 +45,7 @@ public class ForkJoinWithSessionJobAdapter extends ComputeJobAdapter {
         try {
             boolean validateXsdResult = XsdValidator.validate(msg.getMsg(), msg.getXsd());
             session.setAttribute(jobCtx.getJobId(), validateXsdResult);
+            System.out.println("Job id:" + jobCtx.getJobId());
 
             if (!validateXsdResult) {
                 System.out.println("force return result false!");
