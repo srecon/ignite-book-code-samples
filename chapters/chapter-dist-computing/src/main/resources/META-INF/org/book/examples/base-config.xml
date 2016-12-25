@@ -25,5 +25,41 @@
         <property name="checkpointSpi">
             <bean class="org.apache.ignite.spi.checkpoint.cache.CacheCheckpointSpi"/>
         </property>
+        <!--<property name="loadBalancingSpi">-->
+            <!--<bean class="org.apache.ignite.spi.loadbalancing.roundrobin.RoundRobinLoadBalancingSpi">-->
+                <!--&lt;!&ndash; Set to per-task round-robin mode (this is default behavior). &ndash;&gt;-->
+                <!--<property name="perTask" value="true"/>-->
+            <!--</bean>-->
+        <!--</property>-->
+        <!--&lt;!&ndash; Enable task execution events for examples. &ndash;&gt;-->
+        <!--<property name="includeEventTypes">-->
+            <!--<list>-->
+                <!--&lt;!&ndash;Task execution events&ndash;&gt;-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_STARTED"/>-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_FINISHED"/>-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_FAILED"/>-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_TIMEDOUT"/>-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_SESSION_ATTR_SET"/>-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_TASK_REDUCED"/>-->
+
+                <!--&lt;!&ndash;Cache events&ndash;&gt;-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_CACHE_OBJECT_PUT"/>-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_CACHE_OBJECT_READ"/>-->
+                <!--<util:constant static-field="org.apache.ignite.events.EventType.EVT_CACHE_OBJECT_REMOVED"/>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="serviceConfiguration">
+            <list>
+                <bean class="org.apache.ignite.services.ServiceConfiguration">
+                    <property name="name" value="validatingService"/>
+                    <property name="maxPerNodeCount" value="1"/>
+                    <property name="totalCount" value="1"/>
+                    <property name="service">
+                        <ref bean="xsdValidatingServiceImpl"/>
+                    </property>
+                </bean>
+            </list>
+        </property>
     </bean>
+    <bean id="xsdValidatingServiceImpl" class="com.blu.imdg.example7.XsdValidatingServiceImpl"/>-->
 </beans>
