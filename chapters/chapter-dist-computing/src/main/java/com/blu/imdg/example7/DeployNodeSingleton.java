@@ -20,12 +20,6 @@ public class DeployNodeSingleton {
             System.out.println("Deploy Node-singleton service!!");
             ignite.services().deployNodeSingleton(VALIDATING_SERVICE, new XsdValidatingServiceImpl());
 
-//            XsdValidatingService xsdValidatingService = ignite.services().serviceProxy(VALIDATING_SERVICE, XsdValidatingService.class, /*not-sticky*/false);
-//
-//            System.out.println("result=" + xsdValidatingService.isOk(new ValidateMessage("1", sample1, vaidateSchema, validateScript)));
-//            System.out.println("result2=" + xsdValidatingService.isOk(new ValidateMessage("2", sample2, vaidateSchema, validateScript)));
-//
-//            ignite.services().cancel(VALIDATING_SERVICE);
         }
 
     }
