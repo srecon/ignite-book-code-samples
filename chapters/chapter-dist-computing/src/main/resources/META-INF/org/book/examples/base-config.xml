@@ -62,4 +62,5 @@
         </property>
     </bean>
     <bean id="xsdValidatingServiceImpl" class="com.blu.imdg.example7.XsdValidatingServiceImpl"/>-->
+    </bean>
 </beans>
