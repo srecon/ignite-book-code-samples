@@ -22,6 +22,7 @@ import java.math.BigDecimal;
 import java.net.URI;
 /**
  * http://localhost:9988/service/withdrawlimit?accountnum=0000*1111&amount=100
+ * mvn exec:java -Dexec.mainClass=com.blu.imdg.example9.ServiceHttpClient
  * */
 
 @Path("/service")
