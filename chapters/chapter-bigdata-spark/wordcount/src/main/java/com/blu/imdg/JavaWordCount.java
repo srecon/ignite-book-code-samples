@@ -16,6 +16,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Pattern;
 
+/**
+ * Run in Spark Shell : ./spark-submit --class com.blu.imdg.JavaWordCount --master spark://192.168.1.37:7077 ~/Development/workshop/github/ignite-book-code-samples/chapters/chapter-bigdata-spark/wordcount/target/wordcount-1.0-SNAPSHOT.jar ~/Downloads/CHANGES.txt ~/Downloads/
+ * */
 public final class JavaWordCount {
     private static final Pattern SPACE = Pattern.compile(" ");
 
