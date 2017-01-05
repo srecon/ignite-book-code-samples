@@ -29,6 +29,7 @@
         <module>chapter-cep/storm</module>
         <module>chapter-cep/camel</module>
         <module>chapter-dist-computing</module>
+        <module>chapter-bigdata-spark/wordcount</module>
     </modules>
     <dependencyManagement>
         <dependencies>

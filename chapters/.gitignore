@@ -8,3 +8,8 @@
 /chapters.iml
 /chapters.iws
 /chapter-cep/camel/target/
+/chapters.ids
+/chapter-persistence/expiry/expiry.iml
+/chapter-bigdata-spark/wordcount/ignite-spark.iml
+/chapter-bigdata-spark/wordcount/wordcount.ipr
+/chapter-bigdata-spark/wordcount/wordcount.iws
