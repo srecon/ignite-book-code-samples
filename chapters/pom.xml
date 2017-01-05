@@ -30,6 +30,7 @@
         <module>chapter-cep/camel</module>
         <module>chapter-dist-computing</module>
         <module>chapter-bigdata-spark/wordcount</module>
+        <module>chapter-bigdata-spark/ignite-spark-scala</module>
     </modules>
     <dependencyManagement>
         <dependencies>

@@ -1,0 +1,6 @@
+import org.apache.ignite.spark._
+import org.apache.ignite.configuration._
+
+val ic = new IgniteContext[Int, String](sc, () => new IgniteConfiguration())
+val igniteRdd = ic.fromCache("SparkIgniteRDD")
+val res = igniteRdd.foldByKey("")(_ + _).collect

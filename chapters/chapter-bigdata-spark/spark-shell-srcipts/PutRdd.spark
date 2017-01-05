@@ -1,0 +1,7 @@
+import org.apache.ignite.spark._
+import org.apache.ignite.configuration._
+val ic = new IgniteContext[Int, String](sc, () => new IgniteConfiguration())
+val igniteRdd = ic.fromCache("SparkIgniteRDD")
+val RDDa = sc.parallelize(List("packt", "leanpub", "oreally", "wiston", "neahua"), 2)
+val RDDb = RDDa.map(x => (x.length, x))
+igniteRdd.savePairs(RDDb)
