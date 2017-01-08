@@ -19,6 +19,7 @@ public class BankDataGenerator {
     public static final String ACCOUNT_CACHE = "accountCache";
     public static final String SAVINGS_CACHE = "savingsDictionaryCache";
     public static final String TEST_ACCOUNT = "0000*1111";
+    public static final String TEST_UNKNOWN_ACCOUNT = "0000*3333";
 
     public static IgniteCache<AccountCacheKey, AccountCacheData> createBankCache(Ignite ignite) {
         CacheConfiguration accountCacheCfg = new CacheConfiguration()
