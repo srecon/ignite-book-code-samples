@@ -67,7 +67,7 @@
                     <execution>
                         <id>build-query</id>
                         <configuration>
-                            <mainClass>com.blu.imdg.TextQueryExample</mainClass>
+                            <mainClass>com.blu.imdg.SqlQueryEmployees</mainClass>
                             <attachToBuild>true</attachToBuild>
                             <classifier>onejar</classifier>
                             <filename>sql-query-employees-runnable.jar</filename>
