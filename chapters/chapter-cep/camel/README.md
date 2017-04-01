@@ -1,5 +1,3 @@
-What i have done to run the app
-> https://apacheignite.readme.io/v1.6/docs/streaming-example fragment code is difference than example - seems here it is in java 8 streams
 > add following dependencies
     <dependency>
        <groupId>org.apache.ignite</groupId>
