@@ -14,6 +14,7 @@ import java.net.URI;
 
 /**
  * Created by mikl on 11.07.16.
+ * mvn exec:java -Dexec.mainClass=com.blu.imdg.common.HttpAuditEmulator
  */
 @Path("/audit")
 public class HttpAuditEmulator {

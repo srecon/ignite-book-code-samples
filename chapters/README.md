@@ -1,6 +1,4 @@
-#Code for book *high performance in-memory data grid with Apache Ignite*
-
-##Prerequisites
+## Prerequisites
 | N | Name    | Value                                                                                |
 |---|---------|--------------------------------------------------------------------------------------|
 | 1 | JDK     | Oracle JDK 8 and above                                                               |
