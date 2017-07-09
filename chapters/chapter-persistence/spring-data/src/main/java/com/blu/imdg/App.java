@@ -34,10 +34,10 @@ public class App
         Breed collie = new Breed();
         collie.setId(1L);
         collie.setName("collie");
-        //save
+        //save Breed with name collie
         breedRepository.save(1L, collie);
 
-        System.out.println("Add one breed collie in repository!");
+        System.out.println("Add one breed in the repository!");
         // Query the breed
         List<Breed> getAllBreeds = breedRepository.getAllBreedsByName("collie");
 
@@ -58,8 +58,6 @@ public class App
         for(Dog dog : dogs){
             System.out.println("Dog:"+ dog);
         }
-        //dina = dogRepository.getDogById(1L);
-        //System.out.println("Dina:" + dina);
 
     }
 }
