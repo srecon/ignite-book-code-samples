@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ignite.version>1.6.0</ignite.version>
+        <ignite.version>2.3.0</ignite.version>
         <slf4jVersion>1.6.1</slf4jVersion>
         <logback.version>1.0.1</logback.version>
     </properties>
@@ -26,11 +26,11 @@
         <module>chapter-persistence</module>
         <module>chapter-bigdata</module>
         <module>chapter-cep/flume</module>
-        <module>chapter-cep/storm</module>
+        <!--<module>chapter-cep/storm</module>-->
         <module>chapter-cep/camel</module>
         <module>chapter-dist-computing</module>
         <module>chapter-bigdata-spark/wordcount</module>
-        <module>chapter-bigdata-spark/ignite-spark-scala</module>
+        <!--<module>chapter-bigdata-spark/ignite-spark-scala</module>-->
     </modules>
     <dependencyManagement>
         <dependencies>

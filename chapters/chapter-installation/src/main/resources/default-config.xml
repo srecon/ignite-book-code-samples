@@ -36,6 +36,16 @@
                 <bean class="org.apache.ignite.configuration.CacheConfiguration">
                     <property name="name" value="testCache"/>
                     <property name="atomicityMode" value="ATOMIC"/>
+                    <property name="expiryPolicyFactory">
+                        <bean id="expiryPolicy" class="javax.cache.expiry.CreatedExpiryPolicy" factory-method="factoryOf">
+                            <constructor-arg>
+                                <bean class="javax.cache.expiry.Duration">
+                                    <constructor-arg value="MILLISECONDS"/>
+                                    <constructor-arg value="20000"/>
+                                </bean>
+                            </constructor-arg>
+                        </bean>
+                    </property>
                     <!-- query index-->
                     <property name="queryEntities">
                         <list>

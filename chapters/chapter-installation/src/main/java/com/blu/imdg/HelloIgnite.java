@@ -26,7 +26,7 @@ public class HelloIgnite {
         // create new ignite configuration
         IgniteConfiguration cfg = new IgniteConfiguration();
         cfg.setClientMode(false);
-        // set the discovery spi to ignite configuration
+        // set the discovery§ spi to ignite configuration
         cfg.setDiscoverySpi(spi);
         // Start ignite
         Ignite ignite = Ignition.start(cfg);

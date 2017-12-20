@@ -1,4 +1,4 @@
-<t:message xmlns:t="validate-schema.xsd">
+<t:message xmlns:t="http://test.msg/">
     <t:headers>
         <t:header>
             <t:name>header1</t:name>

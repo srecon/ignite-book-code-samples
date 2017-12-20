@@ -31,7 +31,7 @@ public class SimpleTransactions {
 
     public static void main(String[] args) {
         try (Ignite ignite = Ignition.start("example-ignite.xml");) {
-            IgniteTransactions transactions = ignite.transactions();
+            //IgniteTransactions transactions = ignite.transactions();
 
             logger.info("|Transaction example started.|");
 
@@ -116,7 +116,8 @@ public class SimpleTransactions {
      */
     private static void withdraw(IgniteCache<Integer, BankAccount> cache, int accountNumber,
         double amount) throws IgniteException {
-        try (Transaction tx = Ignition.ignite().transactions().txStart(PESSIMISTIC, REPEATABLE_READ)) {
+        Transaction tx = Ignition.ignite().transactions().txStart(PESSIMISTIC, REPEATABLE_READ);
+        try {
             BankAccount bankAccount = cache.get(accountNumber);
 
             // Deposit into account.
@@ -126,6 +127,8 @@ public class SimpleTransactions {
             cache.put(accountNumber, bankAccount);
 
             tx.commit();
+        }catch(Exception e){
+           tx.rollback();
         }
 
         logger.info("");

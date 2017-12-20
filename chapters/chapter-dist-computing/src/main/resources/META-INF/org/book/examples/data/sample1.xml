@@ -2,13 +2,13 @@
     <t:headers>
         <t:header>
             <t:name>header1</t:name>
-            <t:value>value1</t:value>
+            <t:value>transaction</t:value>
         </t:header>
         <t:header>
             <t:name>header2</t:name>
-            <t:value>value2</t:value>
+            <t:value>atm</t:value>
         </t:header>
     </t:headers>
     <t:priority>1</t:priority>
-    <t:body>test</t:body>
+    <t:body>transaction ID: 12dsbfe231df, overdraft</t:body>
 </t:message>
